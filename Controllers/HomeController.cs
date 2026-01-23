@@ -18,7 +18,7 @@ public class HomeController : Controller
 
     public IActionResult Assessment()
     {
-        String name = "Chonlakorn Bualuang",
+        String name = "Kunakorn Khamcharoen",
         classroom = "05-0904",
         educationYear = "3",
         favLanguage = "HTML,CSS,JavaScript";
