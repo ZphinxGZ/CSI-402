@@ -20,6 +20,10 @@ public class AccountController : Controller
     {
         return View();
     }
+        public IActionResult Test2()
+    {
+        return View();
+    }
 
     public IActionResult Assessment()
     {
