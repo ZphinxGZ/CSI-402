@@ -1,6 +1,8 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using CSI402.Models;
+using CSI402.ViewModels;
+using System.Data.Common;
 
 namespace CSI402.Controllers;
 
@@ -100,6 +102,63 @@ public class AccountController : Controller
         return View();
     }
 
+    public IActionResult Lab5()
+    {
+        // var user = new LabUserViewModel();
+        // user.UserId = "65075070";
+        // user.Name = "Kunakorn";
+        // user.Lastname = "Khamchaoren";
+        // user.Age = 24;
+        // user.Address = "123/45 Moo 6, T. Bangna, A. Bangna, Bangkok 10260";
+        // user.Weight = 82M;
+        // user.Height = 175.5M;
+        // var user = new List<LabUserViewModel>{
+        //     new LabUserViewModel{
+        //         UserId = "65075070",
+        //         Name = "Kunakorn",
+        //         Lastname = "Khamchaoren",
+        //         Age = 24,
+        //         Address = "5678 Bangkok 10260",
+        //         Weight = 82M,
+        //         Height = 175.5M,
+        //     },
+        //     new LabUserViewModel{
+        //         UserId = "2222",
+        //         Name = "B",
+        //         Lastname = "BB",
+        //         Age = 24,
+        //         Address = "bb22",
+        //         Weight = 82M,
+        //         Height = 175.5M,
+        //     },
+        //     new LabUserViewModel{
+        //         UserId = "333",
+        //         Name = "c",
+        //         Lastname = "cc",
+        //         Age = 24,
+        //         Address = "cc33",
+        //         Weight = 82M,
+        //         Height = 175.5M,
+        //     }
+            
+        // };
+        // return View(user);
+        return View();
+    }
+    [HttpPost]
+    public IActionResult Lab5(LabUserViewModel data)
+    {
+        string a,b,c;
+        a= data.UserId;
+        b= data.Name;
+        c= data.Lastname;
+
+        @ViewBag.UserId = a;
+        @ViewBag.Name = b;
+        @ViewBag.Lastname = c;
+
+        return View();
+    }
 
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

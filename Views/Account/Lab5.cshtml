@@ -1,0 +1,54 @@
+@* @model IEnumerable<CSI402.ViewModels.LabUserViewModel> *@
+@model CSI402.ViewModels.LabUserViewModel
+
+<h1 class="text-center">Lab 5</h1>
+<div>
+    @* @Model.UserId
+    @Model.Name
+    @Model.Lastname
+    @Model.Age
+    @Model.Address
+    @Model.Weight
+    @Model.Height *@
+
+    @* <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>UserId</th>
+                <th>Name</th>
+                <th>Lastname</th>
+                <th>Age</th>
+                <th>Address</th>
+                <th>Weight</th>
+                <th>Height</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in @Model)
+            {
+                <tr>
+                    <td>@item.UserId</td>
+                    <td>@item.Name</td>
+                    <td>@item.Lastname</td>
+                    <td>@item.Age</td>
+                    <td>@item.Address</td>
+                    <td>@item.Weight</td>
+                    <td>@item.Height</td>
+                </tr>
+            }
+        </tbody>
+    </table> *@
+    <form asp-controller="Account" asp-action="Lab5">
+        UserId<input type="text" asp-for="UserId" class="form-control" placeholder="ID"/>
+        Name<input type="text" asp-for="Name" class="form-control" placeholder="Name"/>
+        Lastname<input type="text" asp-for="Lastname" class="form-control" placeholder="Lastname"/>
+
+        <button class="btn btn-success" type="submit">submit</button>
+    </form>
+
+    <div>
+        @ViewBag.UserId
+        @ViewBag.Name
+        @ViewBag.Lastname
+    </div>
+</div>
