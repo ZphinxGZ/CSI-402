@@ -310,7 +310,6 @@ d:\66075070\CSI-402\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
 d:\66075070\CSI-402\obj\Debug\net10.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 d:\66075070\CSI-402\obj\Debug\net10.0\scopedcss\bundle\CSI402.styles.css
 d:\66075070\CSI-402\obj\Debug\net10.0\scopedcss\projectbundle\CSI402.bundle.scp.css
-d:\66075070\CSI-402\obj\Debug\net10.0\compressed\ot0swb3259-{0}-b9sayid5wm-b9sayid5wm.gz
 d:\66075070\CSI-402\obj\Debug\net10.0\compressed\gu1azxeqk6-{0}-61n19gt1b8-61n19gt1b8.gz
 d:\66075070\CSI-402\obj\Debug\net10.0\compressed\qi98rw6hgp-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
 d:\66075070\CSI-402\obj\Debug\net10.0\compressed\by70nqyhlp-{0}-t1cqhe9u97-t1cqhe9u97.gz
@@ -388,3 +387,5 @@ d:\66075070\CSI-402\bin\Debug\net10.0\CSI402.dll
 d:\66075070\CSI-402\bin\Debug\net10.0\CSI402.pdb
 d:\66075070\CSI-402\obj\Debug\net10.0\CSI402.genruntimeconfig.cache
 d:\66075070\CSI-402\obj\Debug\net10.0\ref\CSI402.dll
+d:\66075070\CSI-402\obj\Debug\net10.0\compressed\ot0swb3259-{0}-b9sayid5wm-b9sayid5wm.gz
+d:\66075070\CSI-402\obj\Debug\net10.0\compressed\ypgssqgbyo-{0}-e8ofzv9dc4-e8ofzv9dc4.gz

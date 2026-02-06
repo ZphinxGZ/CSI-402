@@ -1,0 +1,378 @@
+/* ============================================
+   Project Forms Styling
+   Login & Register Pages
+   ============================================ */
+
+:root {
+    --primary-color: #17a2b8; /* Bootstrap info color */
+    --dark-bg: #212529; /*Bootstrap dark */
+    --light-text: #f8f9fa; /* Bootstrap light */
+    --border-color: #495057;
+    --card-bg: #2d3436;
+    --input-bg: #343a40;
+}
+
+/* ============================================
+   Container & Card Styling
+   ============================================ */
+
+.form-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); */
+    padding: 20px;
+}
+
+.form-card {
+    width: 100%;
+    max-width: 450px;
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border: 1px solid var(--border-color);
+    animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   Header Styling
+   ============================================ */
+
+.form-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-header i {
+    font-size: 48px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    display: block;
+}
+
+.form-header h2 {
+    color: var(--light-text);
+    font-weight: 700;
+    margin: 0;
+    font-size: 28px;
+    letter-spacing: 0.5px;
+}
+
+/* ============================================
+   Form Content Styling
+   ============================================ */
+
+.form-content {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    color: var(--light-text);
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.form-label i {
+    color: var(--primary-color);
+    width: 16px;
+}
+
+.form-control {
+    background-color: var(--input-bg);
+    border: 2px solid var(--border-color);
+    color: var(--light-text);
+    font-size: 14px;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    background-color: var(--input-bg);
+    border-color: var(--primary-color);
+    color: var(--light-text);
+    box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.25);
+}
+
+.form-control::placeholder {
+    color: #868e96;
+}
+
+/* ============================================
+   Checkbox & Radio Styling
+   ============================================ */
+
+.form-check-input {
+    width: 20px;
+    height: 20px;
+    margin-top: 4px;
+    background-color: var(--input-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form-check-input:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.form-check-input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.25);
+}
+
+.form-check-label {
+    color: var(--light-text);
+    font-size: 14px;
+    margin-left: 8px;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* ============================================
+   Button Styling
+   ============================================ */
+
+.btn-info {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    padding: 12px 20px;
+}
+
+.btn-info:hover {
+    background-color: #138496;
+    border-color: #138496;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(23, 162, 184, 0.4);
+}
+
+.btn-info:focus {
+    box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5);
+}
+
+.btn-info i {
+    margin-right: 8px;
+}
+
+.btn-lg {
+    font-size: 16px;
+}
+
+/* ============================================
+   Links Styling
+   ============================================ */
+
+.forgot-password-link,
+.register-link,
+.terms-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.forgot-password-link:hover,
+.register-link:hover,
+.terms-link:hover {
+    color: #138496;
+    text-decoration: underline;
+}
+
+.forgot-password-link::after,
+.register-link::after,
+.terms-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.forgot-password-link:hover::after,
+.register-link:hover::after,
+.terms-link:hover::after {
+    width: 100%;
+}
+
+/* ============================================
+   Divider Styling
+   ============================================ */
+
+.form-divider {
+    position: relative;
+    text-align: center;
+    margin: 25px 0;
+    color: #868e96;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-divider::before,
+.form-divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 45%;
+    height: 1px;
+    background: var(--border-color);
+}
+
+.form-divider::before {
+    left: 0;
+}
+
+.form-divider::after {
+    right: 0;
+}
+
+/* ============================================
+   Social Login Styling
+   ============================================ */
+
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.social-login .btn {
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    border: 2px solid var(--border-color);
+}
+
+.social-login .btn:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(23, 162, 184, 0.3);
+}
+
+/* ============================================
+   Footer Styling
+   ============================================ */
+
+.form-footer {
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.form-footer p {
+    color: var(--light-text);
+    font-size: 14px;
+    margin: 0;
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+
+@media (max-width: 576px) {
+    .form-card {
+        padding: 30px 20px;
+        max-width: 100%;
+    }
+
+    .form-header h2 {
+        font-size: 24px;
+    }
+
+    .form-header i {
+        font-size: 40px;
+    }
+
+    .form-control {
+        font-size: 16px; /* Prevents zoom on mobile */
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .col-md-6 {
+        width: 100% !important;
+    }
+}
+
+/* ============================================
+   Animations
+   ============================================ */
+
+.form-control:focus,
+.form-check-input:focus,
+.btn-info:focus {
+    animation: pulse 0.6s ease;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(23, 162, 184, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(23, 162, 184, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(23, 162, 184, 0);
+    }
+}
+
+/* ============================================
+   Accessibility
+   ============================================ */
+
+.form-control:invalid {
+    border-color: #dc3545;
+}
+
+.form-control:valid {
+    border-color: var(--primary-color);
+}
+
+/* Print Styles */
+@media print {
+    .form-container {
+        background: white;
+    }
+
+    .form-card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}
