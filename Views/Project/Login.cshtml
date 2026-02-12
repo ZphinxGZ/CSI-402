@@ -3,68 +3,64 @@
 
 @{
     ViewData["Title"] = "Login Page";
+    Layout = "_ProjectLayout";
 }
 
-@section Styles {
-    <link rel="stylesheet" href="~/css/project-forms.css" />
-}
+<div class="row justify-content-center mt-5">
+    <div class="col-md-5">
+        <div class="card">
+            <div class="card-body p-4">
+                <h2 class="card-title text-center mb-4">เข้าสู่ระบบ</h2>
 
-<div class="form-container">
-    <div class="form-card">
-        <div class="form-header">
-            <i class="fas fa-sign-in-alt"></i>
-            <h2>เข้าสู่ระบบ</h2>
-        </div>
+                <form method="post">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">อีเมล หรือ ชื่อผู้ใช้</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="example@gmail.com" required asp-for="Email">
+                    </div>
 
-        <form method="post" class="form-content">
-            <div class="mb-3">
-                <label for="email" class="form-label">
-                    <i class="fas fa-envelope"></i> อีเมล หรือ ชื่อผู้ใช้
-                </label>
-                <input type="email" class="form-control form-control-lg" id="email" name="email" placeholder="example@gmail.com" required asp-for="Email">
+                    <div class="mb-3">
+                        <label for="password" class="form-label">รหัสผ่าน</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="กรุณาใส่รหัสผ่าน" required asp-for="Password">
+                    </div>
+
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="remember" name="remember">
+                        <label class="form-check-label" for="remember">จำรหัสผ่านของฉัน</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100 mb-3">เข้าสู่ระบบ</button>
+
+                    <div class="text-center mb-3">
+                        <a href="#" class="text-decoration-none">ลืมรหัสผ่าน?</a>
+                    </div>
+                </form>
+
+                <div class="border-top pt-3 text-center">
+                    <p>ยังไม่มีบัญชี? <a asp-controller="Project" asp-action="Register" class="text-decoration-none">สมัครสมาชิก</a></p>
+                </div>
             </div>
-
-            <div class="mb-3">
-                <label for="password" class="form-label">
-                    <i class="fas fa-lock"></i> รหัสผ่าน
-                </label>
-                <input type="password" class="form-control form-control-lg" id="password" name="password" placeholder="กรุณาใส่รหัสผ่าน" required asp-for="Password">
-            </div>
-
-            <div class="form-check mb-3">
-                <input class="form-check-input" type="checkbox" id="remember" name="remember">
-                <label class="form-check-label" for="remember">
-                    จำรหัสผ่านของฉัน
-                </label>
-            </div>
-
-            <button type="submit" class="btn btn-info btn-lg w-100 fw-bold mb-3">
-                <i class="fas fa-lock-open"></i> เข้าสู่ระบบ
-            </button>
-
-            <div class="text-center mb-3">
-                <a href="#" class="forgot-password-link">ลืมรหัสผ่าน?</a>
-            </div>
-        </form>
-
-        <!-- Divider -->
-        @* <div class="form-divider">หรือ</div> *@
-
-        <!-- Social Login -->
-        @* <div class="social-login">
-            <button class="btn btn-outline-light btn-sm" title="Facebook">
-                <i class="fab fa-facebook"></i>
-            </button>
-            <button class="btn btn-outline-light btn-sm" title="Google">
-                <i class="fab fa-google"></i>
-            </button>
-            <button class="btn btn-outline-light btn-sm" title="Line">
-                <i class="fab fa-line"></i>
-            </button>
-        </div> *@
-
-        <div class="form-footer">
-            <p>ยังไม่มีบัญชี? <a asp-controller="Project" asp-action="Register" class="register-link">สมัครสมาชิก</a></p>
         </div>
     </div>
+</div>
+<div class="container">
+    <h4>Login Data</h4>
+
+    <table class="table table-bordered mt-3">
+        <thead class="table-dark">
+            <tr>
+                <th>Email</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var user in ViewBag.Users)
+                {
+                    <tr>
+                        <td>@user.Email</td>
+                        <td>@user.Password</td>
+                    </tr>
+                }
+        </tbody>
+    </table>
 </div>
