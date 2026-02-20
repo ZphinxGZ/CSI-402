@@ -45,4 +45,18 @@ public class ProjectController : Controller
 
         return View(new ProjectUserViewModel());
     }
+
+    public IActionResult UserList()
+    {
+        var users = new List<ProjectUserViewModel>
+        {
+            new ProjectUserViewModel { Name = "John", Lastname = "Doe", Email = "john.doe@example.com", Password = "pass1234", PhoneNumber = 612345001 },
+            new ProjectUserViewModel { Name = "Jane", Lastname = "Smith", Email = "jane.smith@example.com", Password = "pwd5678", PhoneNumber = 612345002 },
+            new ProjectUserViewModel { Name = "Alice", Lastname = "Brown", Email = "alice.brown@example.com", Password = "alice2026", PhoneNumber = 612345003 },
+            new ProjectUserViewModel { Name = "Bob", Lastname = "Johnson", Email = "bob.johnson@example.com", Password = "bobsecure", PhoneNumber = 612345004 },
+            new ProjectUserViewModel { Name = "Charlie", Lastname = "Lee", Email = "charlie.lee@example.com", Password = "charliepw", PhoneNumber = 612345005 }
+        };
+
+        return View(users);
+    }
 }
