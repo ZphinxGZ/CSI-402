@@ -388,4 +388,3 @@ d:\66075070\CSI-402\bin\Debug\net10.0\CSI402.pdb
 d:\66075070\CSI-402\obj\Debug\net10.0\CSI402.genruntimeconfig.cache
 d:\66075070\CSI-402\obj\Debug\net10.0\ref\CSI402.dll
 d:\66075070\CSI-402\obj\Debug\net10.0\compressed\ot0swb3259-{0}-b9sayid5wm-b9sayid5wm.gz
-d:\66075070\CSI-402\obj\Debug\net10.0\compressed\ypgssqgbyo-{0}-e8ofzv9dc4-e8ofzv9dc4.gz

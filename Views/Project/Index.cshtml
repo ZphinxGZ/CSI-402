@@ -29,4 +29,49 @@
             </a>
         </div>
     </div>
+    <div class="mt-4">
+        <h4>Login Users</h4>
+        <table class="table table-bordered mt-3">
+            <thead class="table-dark">
+                <tr>
+                    <th>Email</th>
+                    <th>Password</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in ViewBag.LoginUsers)
+                {
+                    <tr>
+                        <td>@user.Email</td>
+                        <td>@user.Password</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="mt-4">
+        <h4>Registered Users</h4>
+        <table class="table table-bordered mt-3">
+            <thead class="table-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Lastname</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in ViewBag.RegisterUsers)
+                {
+                    <tr>
+                        <td>@user.Name</td>
+                        <td>@user.Lastname</td>
+                        <td>@user.Email</td>
+                        <td>@user.PhoneNumber</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    
 </div>

@@ -11,6 +11,8 @@ public class ProjectController : Controller
 
     public IActionResult Index()
     {
+        ViewBag.RegisterUsers = registerUsers;
+        ViewBag.LoginUsers = loginUsers;
         return View();
     }
 
@@ -18,7 +20,6 @@ public class ProjectController : Controller
 
     public IActionResult Register()
     {
-        ViewBag.Users = registerUsers;
         return View(new ProjectUserViewModel());
     }
 
@@ -27,7 +28,6 @@ public class ProjectController : Controller
     {
         registerUsers.Add(model);
 
-        ViewBag.Users = registerUsers;
         return View(new ProjectUserViewModel());
     }
 
@@ -35,7 +35,6 @@ public class ProjectController : Controller
 
     public IActionResult Login()
     {
-        ViewBag.Users = loginUsers;
         return View(new ProjectUserViewModel());
     }
 
@@ -44,7 +43,6 @@ public class ProjectController : Controller
     {
         loginUsers.Add(model);
 
-        ViewBag.Users = loginUsers;
         return View(new ProjectUserViewModel());
     }
 }

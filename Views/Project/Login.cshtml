@@ -42,25 +42,3 @@
         </div>
     </div>
 </div>
-<div class="container">
-    <h4>Login Data</h4>
-
-    <table class="table table-bordered mt-3">
-        <thead class="table-dark">
-            <tr>
-                <th>Email</th>
-                <th>Password</th>
-            </tr>
-        </thead>
-
-        <tbody>
-            @foreach (var user in ViewBag.Users)
-                {
-                    <tr>
-                        <td>@user.Email</td>
-                        <td>@user.Password</td>
-                    </tr>
-                }
-        </tbody>
-    </table>
-</div>
