@@ -1,0 +1,31 @@
+@model List<CSI402.Models.Db.Projectuser>
+@using CSI402.Models.Db;
+@{
+    Layout = "_Layout";
+}
+
+<div>
+    <table class="table table-striped table-bordered">
+        <thead class="table table-dark">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Lastname</th>
+                <th>Email</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var userinfo in Model)
+            {
+                <tr>
+                    <td>@userinfo.Id</td>
+                    <td>@userinfo.Name</td>
+                    <td>@userinfo.Lastname</td>
+                    <td>@userinfo.Email</td>
+                    <td>@userinfo.Password</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
