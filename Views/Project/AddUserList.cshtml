@@ -1,0 +1,52 @@
+@{
+    ViewData["Title"] = "Add User List";
+    Layout = "_ProjectLayout";
+}
+
+<div class="row justify-content-center mt-5">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body p-4">
+                <h2 class="card-title text-center mb-4">เพิ่มผู้ใช้ใหม่</h2>
+
+                <form id="addUserForm">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="firstName" class="form-label">ชื่อ</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="ชื่อของคุณ">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="lastName" class="form-label">นามสกุล</label>
+                            <input type="text" class="form-control" id="lastName" placeholder="นามสกุลของคุณ">
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">อีเมล</label>
+                        <input type="email" class="form-control" id="email" placeholder="example@gmail.com">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">เบอร์โทรศัพท์</label>
+                        <input type="tel" class="form-control" id="phone" placeholder="06x-xxxx-xxxx">
+                    </div>
+
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <button type="button" class="btn btn-secondary me-md-2" onclick="clearForm()">ล้างข้อมูล</button>
+                        <button type="submit" class="btn btn-primary">เพิ่มผู้ใช้</button>
+                    </div>
+                </form>
+
+                <div class="border-top pt-3 text-center">
+                    <p><a asp-controller="Project" asp-action="UserList" class="text-decoration-none">กลับรายชื่อผู้ใช้</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function clearForm() {
+        document.getElementById('addUserForm').reset();
+    }
+</script>
