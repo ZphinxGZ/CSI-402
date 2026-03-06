@@ -1,5 +1,6 @@
-@using CSI402.ViewModels
-@model List<ProjectUserViewModel>
+@* @using CSI402.ViewModels
+@model List<ProjectUserViewModel> *@
+@model List<CSI402.ViewModels.ProjectUserViewModel>
 
 @{
     ViewData["Title"] = "User List";
@@ -16,10 +17,12 @@
     <table class="table table-bordered">
         <thead class="table-dark">
             <tr>
+                <th>Id</th>
                 <th>Name</th>
                 <th>Lastname</th>
                 <th>Email</th>
                 <th>Phone</th>
+                <th>Password</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -27,10 +30,12 @@
             @foreach (var user in Model)
             {
                 <tr>
+                    <td>@user.Id</td>
                     <td>@user.Name</td>
                     <td>@user.Lastname</td>
                     <td>@user.Email</td>
                     <td>@user.PhoneNumber</td>
+                    <td>@user.Password</td>
                     <td>
                         <button class="btn btn-warning btn-sm">Edit</button>
                         <button class="btn btn-danger btn-sm">Delete</button>

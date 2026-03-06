@@ -34,7 +34,7 @@ public class ProjectController : Controller
     {
         // registerUsers.Add(model);
         var u = new Projectuser();
-        u.Id = data.Id;
+        u.Id = data.Id ?? 0;
         u.Name = data.Name;
         u.Lastname = data.Lastname;
         u.Password = data.Password;
@@ -63,7 +63,16 @@ public class ProjectController : Controller
 
     public IActionResult UserList()
     {
-        return View();
+        var user = (from u in _db.Projectusers 
+        select new ProjectUserViewModel 
+        { Id = u.Id, 
+        Name = u.Name, 
+        Lastname = u.Lastname, 
+        Email = u.Email, 
+        Password = u.Password, 
+        PhoneNumber = u.PhoneNumber}
+        ).ToList();
+        return View(user);
     }
     public IActionResult AddUserList()
     {
