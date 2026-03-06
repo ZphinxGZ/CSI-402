@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kaika\\Desktop\\AU\\GH\\CSI-402\\CSI402.csproj": {}
+    "c:\\Users\\kaika\\Desktop\\AU\\GH\\CSI-402\\CSI402.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kaika\\Desktop\\AU\\GH\\CSI-402\\CSI402.csproj": {
+    "c:\\Users\\kaika\\Desktop\\AU\\GH\\CSI-402\\CSI402.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kaika\\Desktop\\AU\\GH\\CSI-402\\CSI402.csproj",
+        "projectUniqueName": "c:\\Users\\kaika\\Desktop\\AU\\GH\\CSI-402\\CSI402.csproj",
         "projectName": "CSI402",
-        "projectPath": "C:\\Users\\kaika\\Desktop\\AU\\GH\\CSI-402\\CSI402.csproj",
+        "projectPath": "c:\\Users\\kaika\\Desktop\\AU\\GH\\CSI-402\\CSI402.csproj",
         "packagesPath": "C:\\Users\\kaika\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kaika\\Desktop\\AU\\GH\\CSI-402\\obj\\",
+        "outputPath": "c:\\Users\\kaika\\Desktop\\AU\\GH\\CSI-402\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kaika\\AppData\\Roaming\\NuGet\\NuGet.Config"

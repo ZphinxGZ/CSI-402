@@ -1,3 +1,28 @@
 @{
     Layout = "_Layout";
 }
+@* @using CSI402.Models.Db
+@model List<CSI402.Models.Db.LabStudent> *@
+@model List<CSI402.ViewModels.Lab9User> //ViewModel 
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>UserId</th>
+            <th>Password</th>
+            <th>Name</th>
+            <th>Lastname</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.UserId</td>
+                <td>@item.Password</td>
+                <td>@item.Name</td>
+                <td>@item.Lastname</td>
+            </tr>
+        }
+    </tbody>
+</table>

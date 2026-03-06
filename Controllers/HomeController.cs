@@ -101,9 +101,6 @@ public class HomeController : Controller
         }
         return View();
     }
-
-
-
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
@@ -127,6 +124,13 @@ public class HomeController : Controller
     }
     public IActionResult Lab9List()
     {
-        return View();
+        var user = (from u in _db.LabStudents 
+        select new Lab9User 
+        { UserId = u.StdId, 
+        Name = u.StdName, 
+        Lastname = u.StdLastname, 
+        Password = u.StdPassword}
+        ).ToList();
+        return View(user);
     }
 }

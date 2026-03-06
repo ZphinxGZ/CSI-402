@@ -1,10 +1,13 @@
-@using CSI402.ViewModels
-@model ProjectUserViewModel
+@* @using CSI402.ViewModels *@
+@* @model ProjectUserViewModel *@
 
 @{
     ViewData["Title"] = "Register Page";
     Layout = "_ProjectLayout";
 }
+@* @using CSI402.Models.Db;
+@model List<CSI402.Models.Db.Projectuser>; *@
+@model CSI402.ViewModels.ProjectUserViewModel
 
 <div class="row justify-content-center mt-5">
     <div class="col-md-6">

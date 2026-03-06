@@ -108,14 +108,14 @@ public partial class Csi402dbContext : DbContext
         
         modelBuilder.Entity<LabStudent>(entity =>
         {
-            entity.HasKey(e => e.StdId).HasName("PRIMARY");
+            entity.HasKey(e => e.StdId);
 
-            entity.ToTable("labstudents");
+            entity.ToTable("labstudent");
 
-            entity.Property(e => e.StdId).HasMaxLength(50);
-            entity.Property(e => e.StdName).HasMaxLength(100);
-            entity.Property(e => e.StdLastname).HasMaxLength(100);
-            entity.Property(e => e.StdPassword).HasMaxLength(255);
+            entity.Property(e => e.StdId);
+            entity.Property(e => e.StdName);
+            entity.Property(e => e.StdLastname);
+            entity.Property(e => e.StdPassword);
         });
         
         OnModelCreatingPartial(modelBuilder);
