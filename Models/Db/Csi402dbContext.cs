@@ -16,6 +16,7 @@ public partial class Csi402dbContext : DbContext
     {
     }
 
+
     public virtual DbSet<Order> Orders { get; set; }
 
     public virtual DbSet<Orderitem> Orderitems { get; set; }
@@ -24,6 +25,7 @@ public partial class Csi402dbContext : DbContext
 
     public virtual DbSet<Projectuser> Projectusers { get; set; }
 
+    public virtual DbSet<LabStudent> LabStudents { get; set; }
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         => optionsBuilder.UseMySql("server=localhost;port=3306;database=csi402db;user=root;password=auaou25005", Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.44-mysql"));
 
@@ -103,7 +105,19 @@ public partial class Csi402dbContext : DbContext
                 .UseCollation("utf8mb3_general_ci")
                 .HasCharSet("utf8mb3");
         });
+        
+        modelBuilder.Entity<LabStudent>(entity =>
+        {
+            entity.HasKey(e => e.StdId).HasName("PRIMARY");
 
+            entity.ToTable("labstudents");
+
+            entity.Property(e => e.StdId).HasMaxLength(50);
+            entity.Property(e => e.StdName).HasMaxLength(100);
+            entity.Property(e => e.StdLastname).HasMaxLength(100);
+            entity.Property(e => e.StdPassword).HasMaxLength(255);
+        });
+        
         OnModelCreatingPartial(modelBuilder);
     }
 
