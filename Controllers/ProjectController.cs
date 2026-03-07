@@ -12,12 +12,12 @@ public class ProjectController : Controller
         _db = db;
     }
     // list แยกกัน
-    public static List<ProjectUserViewModel> registerUsers = new();
+    // public static List<ProjectUserViewModel> registerUsers = new();
     public static List<ProjectUserViewModel> loginUsers = new();
 
     public IActionResult Index()
     {
-        ViewBag.RegisterUsers = registerUsers;
+        // ViewBag.RegisterUsers = registerUsers;
         ViewBag.LoginUsers = loginUsers;
         return View();
     }
@@ -26,7 +26,8 @@ public class ProjectController : Controller
 
     public IActionResult Register()
     {
-        return View(new ProjectUserViewModel());
+        // return View(new ProjectUserViewModel());
+        return View();
     }
 
     [HttpPost]
