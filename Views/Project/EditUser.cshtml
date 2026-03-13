@@ -1,7 +1,7 @@
 @model CSI402.ViewModels.ProjectUserViewModel
 
 @{
-    ViewData["Title"] = "Add User List";
+    ViewData["Title"] = "Edit User";
     Layout = "_ProjectLayout";
 }
 
@@ -9,9 +9,14 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-body p-4">
-                <h2 class="card-title text-center mb-4">เพิ่มผู้ใช้ใหม่</h2>
+                <h2 class="card-title text-center mb-4">แก้ไขข้อมูลผู้ใช้</h2>
 
                 <form method="post">
+                    <div class="mb-3">
+                        <label for="id" class="form-label">รหัสผู้ใช้</label>
+                        <input type="text" class="form-control" id="id" readonly asp-for="Id">
+                    </div>
+
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label for="name" class="form-label">ชื่อ</label>
@@ -39,8 +44,8 @@
                     </div>
 
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <button type="button" class="btn btn-secondary me-md-2" onclick="clearForm()">ล้างข้อมูล</button>
-                        <button type="submit" class="btn btn-primary">เพิ่มผู้ใช้</button>
+                        <a asp-controller="Project" asp-action="UserList" class="btn btn-secondary me-md-2">ยกเลิก</a>
+                        <button type="submit" class="btn btn-primary">บันทึกการแก้ไข</button>
                     </div>
                 </form>
 
@@ -51,9 +56,3 @@
         </div>
     </div>
 </div>
-
-<script>
-    function clearForm() {
-        document.querySelector('form').reset();
-    }
-</script>

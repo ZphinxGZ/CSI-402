@@ -12,6 +12,7 @@
             <th>Password</th>
             <th>Name</th>
             <th>Lastname</th>
+            <th>Edit</th>
         </tr>
     </thead>
     <tbody>
@@ -22,6 +23,9 @@
                 <td>@item.Password</td>
                 <td>@item.Name</td>
                 <td>@item.Lastname</td>
+                <td><a asp-route-UID="@item.UserId" asp-action="Lab10" asp-controller="Home">Edit</a>
+                <a onclick="return confirm('คุณต้องการลบ @item.Name @item.Lastname หรือไม่')" asp-route-UID="@item.UserId" asp-action="Lab10D" asp-controller="Home">Delete</a>
+                </td>
             </tr>
         }
     </tbody>

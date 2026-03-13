@@ -77,6 +77,69 @@ public class ProjectController : Controller
     }
     public IActionResult AddUserList()
     {
-        return View();
+        return View(new ProjectUserViewModel());
+    }
+    
+    [HttpPost]
+    public IActionResult AddUserList(ProjectUserViewModel data)
+    {
+        var u = new Projectuser();
+        u.Id = data.Id;
+        u.Name = data.Name;
+        u.Lastname = data.Lastname;
+        u.Password = data.Password;
+        u.Email = data.Email;
+        u.PhoneNumber = data.PhoneNumber;
+        _db.Add(u);
+        _db.SaveChanges();
+
+        return RedirectToAction("UserList", "Project");
+    }
+    
+    public IActionResult EditUser(int UID)
+    {
+        var user = (from u in _db.Projectusers where u.Id == UID select u).FirstOrDefault();
+        if (user != null)
+        {
+            var model = new ProjectUserViewModel
+            {
+                Id = user.Id,
+                Name = user.Name,
+                Lastname = user.Lastname,
+                Email = user.Email,
+                Password = user.Password,
+                PhoneNumber = user.PhoneNumber
+            };
+            return View(model);
+        }
+        return RedirectToAction("UserList", "Project");
+    }
+    
+    [HttpPost]
+    public IActionResult EditUser(ProjectUserViewModel data)
+    {
+        var user = (from u in _db.Projectusers where u.Id == data.Id select u).FirstOrDefault();
+        if (user != null)
+        {
+            user.Name = data.Name;
+            user.Lastname = data.Lastname;
+            user.Password = data.Password;
+            user.Email = data.Email;
+            user.PhoneNumber = data.PhoneNumber;
+            _db.Update(user);
+            _db.SaveChanges();
+        }
+        return RedirectToAction("UserList", "Project");
+    }
+    
+    public IActionResult DeleteUser(int UID)
+    {
+        var user = (from u in _db.Projectusers where u.Id == UID select u).FirstOrDefault();
+        if (user != null)
+        {
+            _db.RemoveRange(user);
+            _db.SaveChanges();
+        }
+        return RedirectToAction("UserList", "Project");
     }
 }
