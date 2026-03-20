@@ -22,7 +22,7 @@
                 <th>Lastname</th>
                 <th>Email</th>
                 <th>Phone</th>
-                <th>Password</th>
+                @* <th>Password</th> *@
                 <th>Action</th>
             </tr>
         </thead>
@@ -35,10 +35,10 @@
                     <td>@user.Lastname</td>
                     <td>@user.Email</td>
                     <td>@user.PhoneNumber</td>
-                    <td>@user.Password</td>
+                    @* <td>@user.Password</td> *@
                     <td>
-                        <button class="btn btn-warning btn-sm">Edit</button>
-                        <button class="btn btn-danger btn-sm">Delete</button>
+                        <a asp-route-UID="@user.Id" asp-action="EditUser" asp-controller="Project" class="btn btn-warning btn-sm">Edit</a>
+                        <a onclick="return confirm('คุณต้องการลบ @user.Name @user.Lastname หรือไม่')" asp-route-UID="@user.Id" asp-action="DeleteUser" asp-controller="Project" class="btn btn-danger btn-sm">Delete</a>
                     </td>
                     
                 </tr>
