@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kaika\\Desktop\\AU\\GH\\CSI-402\\CSI402.csproj": {}
+    "C:\\Users\\ZphinxGz\\Desktop\\Au\\GH\\CSI-402\\CSI402.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kaika\\Desktop\\AU\\GH\\CSI-402\\CSI402.csproj": {
+    "C:\\Users\\ZphinxGz\\Desktop\\Au\\GH\\CSI-402\\CSI402.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kaika\\Desktop\\AU\\GH\\CSI-402\\CSI402.csproj",
+        "projectUniqueName": "C:\\Users\\ZphinxGz\\Desktop\\Au\\GH\\CSI-402\\CSI402.csproj",
         "projectName": "CSI402",
-        "projectPath": "C:\\Users\\kaika\\Desktop\\AU\\GH\\CSI-402\\CSI402.csproj",
-        "packagesPath": "C:\\Users\\kaika\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kaika\\Desktop\\AU\\GH\\CSI-402\\obj\\",
+        "projectPath": "C:\\Users\\ZphinxGz\\Desktop\\Au\\GH\\CSI-402\\CSI402.csproj",
+        "packagesPath": "C:\\Users\\ZphinxGz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ZphinxGz\\Desktop\\Au\\GH\\CSI-402\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ZphinxGz\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -84,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",
