@@ -44,7 +44,7 @@ public class ProjectController : Controller
         _db.Add(u);
         _db.SaveChanges();
 
-        return RedirectToAction("UserList", "Project");
+        return RedirectToAction("index", "Project");
     }
 
     // ================= LOGIN =================
