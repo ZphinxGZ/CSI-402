@@ -127,9 +127,9 @@ public class HomeController : Controller
         var user = (from u in _db.LabStudents 
         select new Lab9User 
         { UserId = u.StdId, 
-        Name = u.StdName, 
-        Lastname = u.StdLastname, 
-        Password = u.StdPassword}
+        Name = u.StdName ?? "", 
+        Lastname = u.StdLastname ?? "", 
+        Password = u.StdPassword ?? ""}
         ).ToList();
         return View(user);
     }
@@ -138,9 +138,9 @@ public class HomeController : Controller
         var check = (from us in _db.LabStudents where us.StdId == UID select new Lab9User 
         { 
             UserId = us.StdId, 
-            Name = us.StdName, 
-            Lastname = us.StdLastname, 
-            Password = us.StdPassword 
+            Name = us.StdName ?? "", 
+            Lastname = us.StdLastname ?? "", 
+            Password = us.StdPassword ?? "" 
         }).FirstOrDefault();
 
         return View(check);

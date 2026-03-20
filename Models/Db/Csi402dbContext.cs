@@ -113,9 +113,12 @@ public partial class Csi402dbContext : DbContext
             entity.ToTable("labstudent");
 
             entity.Property(e => e.StdId);
-            entity.Property(e => e.StdName);
-            entity.Property(e => e.StdLastname);
-            entity.Property(e => e.StdPassword);
+            entity.Property(e => e.StdName)
+                .IsRequired(false);
+            entity.Property(e => e.StdLastname)
+                .IsRequired(false);
+            entity.Property(e => e.StdPassword)
+                .IsRequired(false);
         });
         
         OnModelCreatingPartial(modelBuilder);
